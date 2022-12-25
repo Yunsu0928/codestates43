@@ -1,0 +1,57 @@
+<!-- 계산기 틀
+디스플레이 화면(숫자랑 결과가 나오는 창)
+기본값으로 숫자 0이 출력되어야 한다.
+버튼이 놓을 틀
+버튼나열 : 버튼은 <button>요소로 작성하고 내용은 텍스트로 작성한다. -->
+
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CALCULATOR</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="calculator">
+            <div class="display_area">
+                <div class="display">
+                    0
+                </div>
+            </div>
+            <div class="btn_area">
+                <div class="operator_area">
+                    <button id="w3" class="clear">AC</button>
+                    <button class="operator">÷</button>
+                    <button class="operator">%</button>
+                </div>
+                <div class="operator_area">
+                    <button class="number">7</button>
+                    <button class="number">8</button>
+                    <button class="number">9</button>
+                    <button class="operator">×</button>
+                </div>
+                <div class="operator_area">
+                    <button class="number">4</button>
+                    <button class="number">5</button>
+                    <button class="number">6</button>
+                    <button class="operator">-</button>
+                </div>
+                <div class="operator_area">
+                    <button class="number">1</button>
+                    <button class="number">2</button>
+                    <button class="number">3</button>
+                    <button class="operator">+</button>
+                </div>
+                <div class="operator_area">
+                    <button id="w2" class="number">0</button>
+                    <button class="dot">.</button>
+                    <button class="enter">=</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+    </html>

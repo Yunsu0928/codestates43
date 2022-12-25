@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box; /*여백과 테두리를 포함하는 박스계산법*/
+    margin: 0; /*레이아웃 리셋 (0,0)부터 시작하게 내가 원하는 디자인으로 만들기 위해*/
+    padding: 0;
+    font-family: 'Signika', sans-serif; /*전체적인 폰트디자인*/
+  
+  }
+  
+  body {
+    display: flex;  /*부모박스요소에 적용햇 자식 박스의 방향과 크기를 결정하는 레이아웃 구성방법. 오른쪽으로 정렬 및 내용만큼만 크기 차지*/
+    justify-content: center; /*부모요소에 적용. 가로정렬이 되어있는 상태면, 가로방향으로 어떻게 정렬할것인지 정하는 속성 즉, 가운데 배치*/
+    align-items: center;/*부모요소에 적용. 자식요소들을 축의 수직방향으로 어떻게 정렬할 것인지 정하는 요소. 축이가로니까 세로방향으로는 어떻게 정렬할 것인지 즉, 가운데로 정렬*/
+    border: 1px solid red;
+    height: 100vh;  /*페이지 크기만큼*/
+    background-image: url("./background.jpeg") ;
+  }
+  
+  .calculator {
+    background-color: #f7cac9; /* 계산기 몸통 색상 */
+    width: 380px; /* 계산기의 너비 */
+    height: 520px; /* 계산기의 높이 */
+    border-radius: 30px; /* 테두리 둥굴게 얼만큼 */
+    padding: 20px 10px 0px 10px; /* 계산기 안쪽 여백 위 오른쪽 아래 왼쪽 순서 */
+    border: solid 6px #fce8e8; /* 테두리 */
+    box-shadow: 10px 10px #ef9795;/* 계산기 바닥 그림자*/
+  }
+  
+  .display_area {  /*디스플레이 박스 뒤 색상*/
+  height: 100px;   /*높이*/
+  background-color: #ffffff;
+  border-radius: 27px;
+  display: flex;  /*display의 부모속성이니까, 가로정렬 및 내용만큼 크기 차지*/
+  justify-content: center; /*가로 축 수평방향으로 정렬 어떻게 할건지*/
+  align-items: center;   /*가로축 수직방향으로 정렬 어떻게 할건지*/
+  box-shadow: 5px 5px #ef9795;
+  margin: 7px 7px 15px 7px;  /*바깥쪽 여백*/
+  }
+  
+  .display {
+  height: 80px;  /*디스플레이 높이*/
+  width: 95%;    /*디스플레이 너비*/
+  background-color: #fff2cc;
+  border-radius: 25px;
+  display:flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 30px;   
+  box-shadow: 2px 3px #ffe69e;
+  }
+  
+  
+  
+  /* span {
+  vertical-align: text-bottom;
+  } */
+  
+  .btn_area {   /* 계산기 버튼 틀 */
+  background-color: #ffffff;
+  border-radius: 27px;
+  height: 350px;
+  margin: 7px;
+  display: flex; /* operator_area, operator, number 등 부모속성, 가로정렬 및 내용만큼 크기차지*/
+  flex-direction: column;  /*정렬축정하기, 안정하면 기본 가로정렬, column이니까 operator_area 자식요소를 세로정렬*/
+  justify-content: space-evenly; /*아이템들의 사이와 양 끝에 균일한 간격을 만들어준다*/
+  align-items: center; /*세로축이 기준이니까, 세로축의 수직방향 즉, 가로뱡향으로 어떻게 정렬할 것인지.*/
+  box-shadow: 5px 5px #ef9795;
+  }
+  
+  .operator_area { /*버튼들 뒤 박스 5개*/
+  background-color: #fff2cc;
+  height: 60px;
+  border-radius: 20px;
+  width: 95%;
+  display: flex;  /*button의 부모속성이니까, 가로정렬 및 내용만큼 크기차지*/
+  justify-content: space-evenly; /*아이템들의 사이와 양 끝의 간격을 균일하게*/
+  align-items: center; /*세로축이 기준인 상태(btn_area), 세로축의 수직방향 정렬은 가운데정렬*/
+  }
+  
+  button {
+  background-color: #91a8d0;
+  border: none;
+  border-radius: 20px;
+  height: 49px;
+  width: 23%;
+  font-size: 25px;
+  box-shadow: 2px 3px #708dc2;
+  }
+  
+  button:hover{
+    background-color: rgb(242, 214, 56);
+    cursor: pointer;
+  }
+  
+  button:active{
+    box-shadow: inset -.3rem -.1rem 1.4rem white, inset .3rem .4rem .8rem black;
+  }
+  
+  #w2 {
+  width: 46%;  /* 숫자 0 버튼 너비를 더 주려고*/
+  }
+  
+  #w3 {
+  width: 46%;  /* AC버튼 너비를 더 주려고 */
+  }
